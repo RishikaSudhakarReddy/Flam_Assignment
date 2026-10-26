@@ -1,0 +1,3 @@
+# Indic Corpus Cleaning and Curation Pipeline
+# Python dependencies
+pyarrow>=14.0.0

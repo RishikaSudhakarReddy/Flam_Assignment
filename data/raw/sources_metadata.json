@@ -1,0 +1,35 @@
+[
+  {
+    "name": "aaditya/databricks-dolly-15k-Hindi",
+    "url": "https://huggingface.co/datasets/aaditya/databricks-dolly-15k-Hindi/resolve/main/data/train-00000-of-00001.parquet",
+    "license": "CC BY-SA 3.0",
+    "description": "15,010 instruction-response documents translated to Hindi (Devanagari script)",
+    "language_focus": "hi",
+    "download_date": "2026-10-26T17:24:44.297469+00:00",
+    "local_file": "dolly_15k_hindi.parquet",
+    "size_bytes": 18858317,
+    "sha256": "c052e622bed539eaf0d251334017b51fe296ac255b7ade815b432efdf049dd61"
+  },
+  {
+    "name": "DSMJ910/hinglish-instruct-10k",
+    "url": "https://huggingface.co/datasets/DSMJ910/hinglish-instruct-10k/resolve/main/data/train-00000-of-00001.parquet",
+    "license": "Apache-2.0",
+    "description": "10,594 Roman script Hinglish (code-mixed Hindi-English) conversational & instruction documents",
+    "language_focus": "hi-Latn",
+    "download_date": "2026-10-26T17:24:46.293507+00:00",
+    "local_file": "hinglish_instruct_10k.parquet",
+    "size_bytes": 3157383,
+    "sha256": "8b0ddd04d5851a82c28e63406ec3dff3ae6a16ab3e2e5e3965c12116e0f1d787"
+  },
+  {
+    "name": "l3cube-pune/code-mixed-nlp (L3Cube-HingLID)",
+    "url": "https://raw.githubusercontent.com/l3cube-pune/code-mixed-nlp/main/L3Cube-HingLID/train.txt",
+    "license": "CC BY-NC-SA 4.0",
+    "description": "31,756 real-world Roman Hinglish social media utterances in token CoNLL format",
+    "language_focus": "hi-Latn",
+    "download_date": "2026-10-26T17:24:48.500001+00:00",
+    "local_file": "l3cube_hinglid_train.txt",
+    "size_bytes": 7782826,
+    "sha256": "079607dd52d5cf56039b8ac6060fed9518914aa6b0e3d7699a799818d6b6574b"
+  }
+]

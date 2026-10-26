@@ -1,0 +1,22 @@
+# Byte-compiled / optimized files
+__pycache__/
+*.py[cod]
+*$py.class
+*.tmp
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Large datasets (Don't send the full dataset as specified in the assignment)
+data/raw/*.parquet
+data/raw/*.txt
+data/out/
+*.tmp
+
+# IDE & OS files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

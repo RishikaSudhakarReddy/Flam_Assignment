@@ -1,0 +1,3 @@
+"""
+Indic Corpus Cleaner package.
+"""

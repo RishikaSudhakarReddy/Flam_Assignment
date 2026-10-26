@@ -1,0 +1,151 @@
+{
+  "pipeline": "IndicCorpusCleaningPipeline",
+  "timestamp_utc": "2026-10-26T17:49:01Z",
+  "elapsed_seconds": 357.22,
+  "parameters": {
+    "near_dup_threshold": 0.8,
+    "minhash_permutations": 64,
+    "lsh_bands": 16,
+    "lsh_rows_per_band": 4,
+    "shingle_k": 5,
+    "eval_size": 200,
+    "random_seed": 42
+  },
+  "eval_specification": {
+    "metric_description": "Measures multi-task Indic comprehension, fluency, and code-mixed Hindi-English reasoning across conversational and informational registers without train-set memorization.",
+    "total_items": 200,
+    "hi_count": 120,
+    "hi_latn_count": 80
+  },
+  "input_file_hashes": {
+    "dolly_15k_hindi.parquet": "c052e622bed539eaf0d251334017b51fe296ac255b7ade815b432efdf049dd61",
+    "hinglish_instruct_10k.parquet": "8b0ddd04d5851a82c28e63406ec3dff3ae6a16ab3e2e5e3965c12116e0f1d787",
+    "l3cube_hinglid_train.txt": "079607dd52d5cf56039b8ac6060fed9518914aa6b0e3d7699a799818d6b6574b",
+    "sources_metadata.json": "0ea36e9647db62fbc4758bf7da17e76e6774bd1c7a85bba4d13dbacd5098ec1d"
+  },
+  "stage_counts": {
+    "total_input_records": 57360,
+    "read_malformed": 0,
+    "lang_hi": 14901,
+    "lang_hi_latn": 41120,
+    "lang_en_or_other_dropped": 1339,
+    "quality_filter_dropped": 178,
+    "exact_duplicate_dropped": 394,
+    "near_duplicate_dropped": 349,
+    "eval_held_out": 200,
+    "contamination_purged": 0,
+    "pii_redacted_documents": 98,
+    "clean_kept_records": 54900
+  },
+  "language_funnel": {
+    "hi": {
+      "input": 14901,
+      "quality_passed": 14885,
+      "exact_dedup_passed": 14843,
+      "near_dedup_passed": 14726,
+      "clean_kept": 14606
+    },
+    "hi-Latn": {
+      "input": 41120,
+      "quality_passed": 40958,
+      "exact_dedup_passed": 40606,
+      "near_dedup_passed": 40374,
+      "clean_kept": 40294
+    },
+    "en or other": {
+      "input": 1339,
+      "quality_passed": 0,
+      "exact_dedup_passed": 0,
+      "near_dedup_passed": 0,
+      "clean_kept": 0
+    }
+  },
+  "pii_redaction_totals": {
+    "phone": 108,
+    "email": 13,
+    "aadhaar": 4,
+    "pan": 0
+  },
+  "borderline_near_duplicate_pairs": [
+    {
+      "doc1_id": "dolly_15k_hindi.parquet#row_463",
+      "doc2_id": "dolly_15k_hindi.parquet#row_469",
+      "doc1_text": "उत्तर भारतीय बेसिन में कब तूफान सबसे आम हैं गर्मियों को पारंपरिक रूप से गर्म या गर्म मौसम से जोड़ा जाता है। भूमध्यसागरीय जलवायु में यह शुष्क मौसम से भी",
+      "doc2_text": "दक्षिणी गोलार्ध में उष्णकटिबंधीय चक्रवात का मौसम कब होता है गर्मियों को पारंपरिक रूप से गर्म या गर्म मौसम से जोड़ा जाता है। भूमध्यसागरीय जलवायु में यह ",
+      "similarity": 0.9193,
+      "action": "DROPPED"
+    },
+    {
+      "doc1_id": "dolly_15k_hindi.parquet#row_1130",
+      "doc2_id": "dolly_15k_hindi.parquet#row_1140",
+      "doc1_text": "कैबरनेट सॉविनन क्या है कैबरनेट सॉविनन फ्रेंच kabɛʁnɛ soviɲɔ दुनिया में सबसे ज्यादा जानी जाने वाली रेड वाइन ग्रेप किस्मों में से एक है। यह लगभग हर प्रम",
+      "doc2_text": "कैबरनेट सॉविनन कहाँ उगाया जाता है कैबरनेट सॉविनन फ्रेंच kabɛʁnɛ soviɲɔ दुनिया भर में सबसे ज्यादा जाने जाने वाली रेड वाइन ग्रेप किस्मों में से एक है। य",
+      "similarity": 0.7497,
+      "action": "KEPT"
+    },
+    {
+      "doc1_id": "dolly_15k_hindi.parquet#row_714",
+      "doc2_id": "dolly_15k_hindi.parquet#row_1853",
+      "doc1_text": "पैराग्राफ में दी गई जानकारी के अनुसार लास वेगास में कौन कौन सी जगहें घूमने के लिए अनुशंसित की गई हैं लास वेगास स्ट्रिप क्लार्क काउंटी नेवादा में लास व",
+      "doc2_text": "दिए गए पैराग्राफ से लास वेगास का सबसे प्रसिद्ध होटल का नाम बताइए लास वेगास स्ट्रिप क्लार्क काउंटी नेवादा में लास वेगास बुलेवार्ड साउथ का एक हिस्सा है ",
+      "similarity": 0.7034,
+      "action": "KEPT"
+    },
+    {
+      "doc1_id": "dolly_15k_hindi.parquet#row_1623",
+      "doc2_id": "dolly_15k_hindi.parquet#row_2043",
+      "doc1_text": "bernoulli s principle ke anusaar kinetic energy potential energy aur internal energy ka sum kya hona chahiye bernoulli s principle fluid dynamics में ",
+      "doc2_text": "bernoulli s principle ko neeche diye gaye paragraphs ke based pe summarize karein bernoulli s principle fluid dynamics में एक प्रमुख अवधारणा है जो दबा",
+      "similarity": 0.7999,
+      "action": "KEPT"
+    },
+    {
+      "doc1_id": "dolly_15k_hindi.parquet#row_1783",
+      "doc2_id": "dolly_15k_hindi.parquet#row_2121",
+      "doc1_text": "पैसेज के अनुसार रिपब्लिक रिकॉर्ड के लिए साइन करने के बाद टेलर के कुछ हिट गाने बताएं। टेलर एलिसन स्विफ्ट जन्म 13 दिसंबर 1989 एक अमेरिकी गायिका गीतकार ह",
+      "doc2_text": "टेलर किस रिकॉर्ड लेबल से जुड़ी थी टेलर एलिसन स्विफ्ट 13 दिसंबर 1989 को जन्मी एक अमेरिकी गायिका गीतकार हैं। उनकी शैली व्यापी डिस्कोग्राफी गीत लेखन क्षमत",
+      "similarity": 0.7536,
+      "action": "KEPT"
+    },
+    {
+      "doc1_id": "dolly_15k_hindi.parquet#row_1207",
+      "doc2_id": "dolly_15k_hindi.parquet#row_2268",
+      "doc1_text": "कंप्यूटर साइंस में cap प्रमेय क्या है सैद्धांतिक कंप्यूटर विज्ञान में cap प्रमेय जिसे कंप्यूटर वैज्ञानिक एरिक ब्रूअर के नाम पर ब्रूअर प्रमेय भी कहा जा",
+      "doc2_text": "कंप्यूटर साइंस में सीएपी प्रमेय क्या है सैद्धांतिक कंप्यूटर विज्ञान में सीएपी प्रमेय जिसे कंप्यूटर वैज्ञानिक एरिक ब्रूअर के नाम पर ब्रूअर प्रमेय भी कह",
+      "similarity": 0.8297,
+      "action": "DROPPED"
+    },
+    {
+      "doc1_id": "dolly_15k_hindi.parquet#row_2392",
+      "doc2_id": "dolly_15k_hindi.parquet#row_2408",
+      "doc1_text": "इलेक्ट्रॉनिक्स इंजीनियरिंग क्या है इलेक्ट्रॉनिक्स इलेक्ट्रिकल सर्किट से संबंधित है जिसमें वैक्यूम ट्यूब ट्रांजिस्टर डायोड सेंसर और इंटीग्रेटेड सर्किट ",
+      "doc2_text": "इलेक्ट्रॉनिक्स किस चीज से संबंधित है इलेक्ट्रॉनिक्स इलेक्ट्रिकल सर्किट से संबंधित है जिसमें वैक्यूम ट्यूब ट्रांजिस्टर डायोड सेंसर और इंटीग्रेटेड सर्कि",
+      "similarity": 0.8677,
+      "action": "DROPPED"
+    },
+    {
+      "doc1_id": "dolly_15k_hindi.parquet#row_444",
+      "doc2_id": "dolly_15k_hindi.parquet#row_2446",
+      "doc1_text": "पहला अमेरिकी राष्ट्रपति कौन था संयुक्त राज्य अमेरिका के पहले राष्ट्रपति जॉर्ज वाशिंगटन थे।",
+      "doc2_text": "संयुक्त राज्य अमेरिका के पहले राष्ट्रपति कौन थे जॉर्ज वाशिंगटन",
+      "similarity": 0.6625,
+      "action": "KEPT"
+    },
+    {
+      "doc1_id": "dolly_15k_hindi.parquet#row_2084",
+      "doc2_id": "dolly_15k_hindi.parquet#row_2593",
+      "doc1_text": "कौन से फल अक्सर कैंडीड फल होते हैं सूखे मेवे वे फल होते हैं जिनमें से अधिकांश पानी निकाल दिया गया होता है या तो प्राकृतिक रूप से धूप में सुखाकर या विश",
+      "doc2_text": "सूखे मेवे को क्यों पसंद किया जाता है सूखे मेवे ऐसे फल होते हैं जिनमें से अधिकांश पानी को प्राकृतिक रूप से धूप में सुखाकर या विशेष ड्रायर या डिहाइड्रेट",
+      "similarity": 0.6898,
+      "action": "KEPT"
+    },
+    {
+      "doc1_id": "dolly_15k_hindi.parquet#row_2332",
+      "doc2_id": "dolly_15k_hindi.parquet#row_2621",
+      "doc1_text": "नीचे दिए गए स्की रिसॉर्ट में से कौन से कोलोराडो में हैं और कौन से यूटा में हैं अल्टा स्की एरिया ब्राइटन स्की रिसॉर्ट स्नोबर्ड सॉलिट्यूड माउंटेन रिसॉर्",
+      "doc2_text": "नीचे दिए गए स्की रिसॉर्ट में से कौन यूटा में हैं अल्टा स्की एरिया ब्राइटन स्की रिसॉर्ट स्नोबर्ड सॉलिट्यूड माउंटेन रिसॉर्ट डियर वैली रिसॉर्ट पार्क सिटी",
+      "similarity": 0.8767,
+      "action": "DROPPED"
+    }
+  ]
+}
